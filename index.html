@@ -273,7 +273,7 @@
     animation: fadeUp 0.9s 0.2s ease both;
   }
 
-  h1 .accent { color: #ffffff; }
+  
 
   .hero-subtitle {
     font-size: 1.15rem;
@@ -355,6 +355,7 @@
 
   /* ===== SECTIONS ===== */
   section { padding: 6rem 4rem; }
+  @media (max-width: 1100px) { section { padding: 4rem 2rem; } }
 
   .section-header {
     margin-bottom: 3.5rem;
@@ -461,7 +462,7 @@
   .research-card {
     background: var(--sand-light);
     border-radius: 16px;
-    padding: 0 0 1.5rem 0;
+    padding: 0 0 1rem 0;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -1323,8 +1324,8 @@
   .research-card > .research-tag,
   .research-card > span.research-tag,
   .research-card > .research-card-body {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   .research-card > .research-icon { padding-top: 1.25rem; }
   .research-card > .research-card-body { padding-top: 1rem; padding-bottom: 0; }
@@ -1411,6 +1412,8 @@
 
   .pub-journal { color: rgba(255,255,255,0.92) !important; font-style: italic; }
 
+
+  h1 .accent { color: #ffffff !important; }
 </style>
 </head>
 <body>
@@ -1561,7 +1564,7 @@
     <h2>Research <span>Projects</span></h2>
     <div class="section-divider"></div>
   </div>
-  <div class="research-grid" style="display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:1.5rem !important;">
+  <div class="research-grid" style="display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:1rem !important;width:100% !important;">
     <div class="research-card">
 
       <figure style="margin:0;">
