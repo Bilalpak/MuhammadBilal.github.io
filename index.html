@@ -273,7 +273,7 @@
     animation: fadeUp 0.9s 0.2s ease both;
   }
 
-  h1 .accent { color: var(--clay-light); }
+  h1 .accent { color: #ffffff; }
 
   .hero-subtitle {
     font-size: 1.15rem;
@@ -458,7 +458,7 @@
 
   .research-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 1.5rem;
     align-items: stretch;
   }
@@ -828,7 +828,7 @@
     section { padding: 4rem 1.5rem; }
     #home { padding: 80px 1.5rem 3rem; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .research-grid { grid-template-columns: 1fr; }
+    .research-grid { grid-template-columns: repeat(3, 1fr) !important; }
     .skills-grid { grid-template-columns: 1fr; }
     .awards-grid { grid-template-columns: 1fr 1fr; }
     .nav-links { display: none; }
