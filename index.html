@@ -470,6 +470,11 @@
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+  }
+  .research-card p {
+    flex: 1;
   }
 
   .research-card::before {
@@ -495,10 +500,11 @@
 
   .research-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: var(--slate);
     margin-bottom: 0.75rem;
-    line-height: 1.3;
+    line-height: 1.35;
+    min-height: 3.5rem;
   }
 
   .research-card p {
@@ -855,7 +861,7 @@
 
   .research-card img.landslide-img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 160px;
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
@@ -1199,6 +1205,31 @@
     .sph-row { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
   }
 
+
+  .pub-section-heading {
+    margin: 2rem 0 0.75rem 0;
+  }
+  .pub-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clay-light);
+    padding: 0.35rem 1rem;
+    border: 1px solid rgba(232,168,74,0.3);
+    border-radius: 100px;
+    background: rgba(232,168,74,0.08);
+  }
+  .pub-section-label::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--clay-light);
+  }
+
 </style>
 </head>
 <body>
@@ -1357,7 +1388,7 @@
         <figcaption class="fig-caption">Fig. Clustered rainfall-induced shallow landslides, Fujian, southeastern China</figcaption>
       </figure>
       <div class="research-icon">🏔️</div>
-      <h3>Phase Transition of Clustered Shallow Flow-Slide Disaster Chains</h3>
+      <h3>Phase Transition of Clustered Shallow Flow-Slide Disaster Chains in Northeastern China</h3>
       <p>National Key Project examining dynamic processes and hazard assessment of complex chains of rainfall-induced landslides and debris flows in southeastern China. Tools: LPF3D, Abaqus, GIS.</p>
       <span class="research-tag">Current PhD · National Key Project</span>
     </div>
@@ -1368,7 +1399,7 @@
         <figcaption class="fig-caption">Fig. Xinyi Village landslide, Northeast China — freeze-thaw failure</figcaption>
       </figure>
       <div class="research-icon">❄️</div>
-      <h3>Slope Stability under Freeze-Thaw Cycles</h3>
+      <h3>Slope Stability Analysis under Freeze and Thaw Cycles with Joint Frame Anchors and Anti-Slip Piles Stabilization</h3>
       <p>Case study of the Xinyi Village landslide in Northeast China. Used FEM via Abaqus with shear strength reduction analysis to reveal failure mechanisms under repeated freeze-thaw cycles.</p>
       <span class="research-tag" style="background:rgba(193,127,58,0.1);color:var(--clay)">Master's Project</span>
     </div>
@@ -1379,7 +1410,7 @@
         <figcaption class="fig-caption">Fig. Expansive soil cracking, Chakri area, Potohar Region, Pakistan</figcaption>
       </figure>
       <div class="research-icon">🛣️</div>
-      <h3>Prediction of Subgrade Soil Strength</h3>
+      <h3>Characterization and Subgrade Strength Prediction of Expansive Soils in Pakistan's Potohar Region with Stone Dust Stabilization</h3>
       <p>Led a team of 6 to develop correlation models for CBR prediction from UCC values for indigenous subgrade soils in Pakistan's Potohar region. Published at CSCE 2021.</p>
       <span class="research-tag" style="background:rgba(91,159,191,0.1);color:var(--sky)">Bachelor's Project</span>
     </div>
@@ -1392,6 +1423,9 @@
     <div class="section-eyebrow">Scholarly Work</div>
     <h2>Publications & <span>Papers</span></h2>
     <div class="section-divider"></div>
+  </div>
+  <div class="pub-section-heading">
+    <div class="pub-section-label">Journal Articles</div>
   </div>
   <div class="pub-list">
 
@@ -1455,9 +1489,17 @@
 </a>
     </div>
 
-    <a href="https://doi.org/10.26392/SSM.2023.06.01.054" target="_blank" style="text-decoration:none;display:block;" class="pub-item-link">
+    </div><!-- close pub-list journals -->
+
+  <div class="pub-section-heading">
+    <div class="pub-section-label">Conference Papers</div>
+  </div>
+
+  <div class="pub-list">
+
+<a href="https://doi.org/10.26392/SSM.2023.06.01.054" target="_blank" style="text-decoration:none;display:block;" class="pub-item-link">
 <div class="pub-item">
-      <div class="pub-num">07</div>
+      <div class="pub-num">01</div>
       <div>
         <div class="pub-title">Regression Model for Predicting Soaked CBR from UCC</div>
         <div class="pub-meta"><span class="pub-journal">Sustainable Structures and Materials</span>, 6(1), 54–58 · 2023 · DOI: 10.26392/SSM.2023.06.01.054</div>
@@ -1467,7 +1509,7 @@
 
     <a href="https://scholar.google.com/citations?user=vC4So44AAAAJ&hl=en" target="_blank" style="text-decoration:none;display:block;" class="pub-item-link">
 <div class="pub-item">
-      <div class="pub-num">08</div>
+      <div class="pub-num">02</div>
       <div>
         <div class="pub-title">Development of Empirical Correlation between Index and Strength Properties for Indigenous Subgrade Soils</div>
         <div class="pub-meta"><span class="pub-journal">3rd CSCE Conference</span> · 2021</div>
@@ -1477,7 +1519,7 @@
 
     <a href="https://scholar.google.com/citations?user=vC4So44AAAAJ&hl=en" target="_blank" style="text-decoration:none;display:block;" class="pub-item-link">
 <div class="pub-item">
-      <div class="pub-num">09</div>
+      <div class="pub-num">03</div>
       <div>
         <div class="pub-title">Effectiveness of Stone Dust as an Expansive Soil Stabilizer</div>
         <div class="pub-meta"><span class="pub-journal">2nd CSCE Conference</span> · 2020</div>
