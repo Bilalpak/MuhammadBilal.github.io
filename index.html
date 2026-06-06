@@ -469,6 +469,9 @@
     border: 1px solid rgba(0,0,0,0.06);
     display: flex;
     flex-direction: column;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: 0 !important;
   }
   .research-card-body {
     padding: 1.25rem 1.5rem;
@@ -1564,7 +1567,7 @@
     <h2>Research <span>Projects</span></h2>
     <div class="section-divider"></div>
   </div>
-  <div class="research-grid" style="display:grid !important;grid-template-columns:repeat(3,1fr) !important;gap:1rem !important;width:100% !important;">
+  <div class="research-grid" style="display:flex !important;flex-direction:row !important;gap:1rem !important;width:100% !important;align-items:stretch !important;">
     <div class="research-card">
 
       <figure style="margin:0;">
