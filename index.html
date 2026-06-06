@@ -458,8 +458,9 @@
 
   .research-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
+    align-items: stretch;
   }
 
   .research-card {
@@ -823,7 +824,7 @@
   footer strong { color: rgba(255,255,255,0.8); }
 
   /* ===== RESPONSIVE ===== */
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     section { padding: 4rem 1.5rem; }
     #home { padding: 80px 1.5rem 3rem; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1226,7 +1227,7 @@
     display: block;
     background: white;
   }
-  @media (max-width: 900px) {
+  @media (max-width: 700px) {
     .sph-row { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
   }
 
@@ -1328,17 +1329,83 @@
   .research-card > h3,
   .research-card > p,
   .research-card > .research-tag,
-  .research-card > span.research-tag {
+  .research-card > span.research-tag,
+  .research-card > .research-card-body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
   .research-card > .research-icon { padding-top: 1.25rem; }
+  .research-card > .research-card-body { padding-top: 1rem; padding-bottom: 0; }
   .research-card > .fig-caption,
   .research-card figcaption { padding: 0.35rem 0.75rem; }
   .research-card figure { margin: 0; }
   .research-card figure img { border-radius: 0; }
   .research-card { border-radius: 16px; overflow: hidden; }
-  .research-grid { align-items: stretch; }
+
+
+  /* ===== SHARP TEXT GLOBAL OVERRIDE ===== */
+  p, li, span:not(.skill-tag):not(.exp-tag):not(.pub-status):not(.research-tag):not(.hero-tag):not(.section-eyebrow):not(.edu-uni):not(.edu-year):not(.contact-label):not(.sph-card-title):not(.nav-links a):not(.stat-label):not(.award-title) {
+    color: #222222;
+  }
+  .about-text p,
+  .contact-intro p {
+    font-size: 1.05rem !important;
+    line-height: 1.9 !important;
+    color: #1e1e1e !important;
+  }
+  .research-card p {
+    font-size: 0.96rem !important;
+    line-height: 1.78 !important;
+    color: #2a2a2a !important;
+  }
+  .pub-title {
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    color: #f0f0f0 !important;
+  }
+  .pub-meta {
+    font-size: 0.87rem !important;
+    color: rgba(255,255,255,0.65) !important;
+  }
+  .edu-degree {
+    font-size: 1.02rem !important;
+    font-weight: 700 !important;
+    color: #111 !important;
+  }
+  .edu-uni {
+    font-size: 0.92rem !important;
+    color: var(--earth-mid) !important;
+  }
+  .edu-year {
+    font-size: 0.84rem !important;
+    color: #444 !important;
+  }
+  .skill-tag {
+    font-size: 0.88rem !important;
+    color: #111 !important;
+    font-weight: 500 !important;
+  }
+  .contact-value {
+    font-size: 0.98rem !important;
+    color: #111 !important;
+    font-weight: 600 !important;
+  }
+  .contact-label {
+    font-size: 0.82rem !important;
+    color: #555 !important;
+  }
+  .hero-subtitle {
+    font-size: 1.15rem !important;
+    color: rgba(255,255,255,0.82) !important;
+    line-height: 1.78 !important;
+  }
+  .fig-caption, figcaption {
+    font-size: 0.74rem !important;
+    color: #555 !important;
+  }
+  .research-card .fig-caption, .research-card figcaption {
+    color: #555 !important;
+  }
 
 </style>
 </head>
