@@ -394,7 +394,7 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.75fr 0.9fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 2.5rem;
     align-items: start;
   }
@@ -909,7 +909,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-top: 13rem;
   }
 
   /* SPH Live card */
@@ -1047,7 +1046,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-top: 13rem;
   }
   .sph-card {
     background: var(--slate);
@@ -1184,9 +1182,18 @@
   }
   .sph-video-full {
     width: 100%;
-    height: auto;
+    height: 380px;
+    object-fit: contain;
     display: block;
+    background: #111;
     border-radius: 0;
+  }
+  .sph-diagram-img {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    display: block;
+    background: white;
   }
   @media (max-width: 900px) {
     .sph-row { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
@@ -1286,22 +1293,6 @@
         I am currently involved in a <strong>National Key Research Project</strong> on dynamic landslide chain processes in China's southeastern mountains, contributing to the development of robust early warning systems that can protect lives and infrastructure in hazard-prone regions.
       </p>
     </div><!-- end about-text -->
-    <div class="about-sph-visual">
-      <div class="sph-card">
-        <div class="sph-card-header">
-          <span class="sph-dot"></span>
-          <span class="sph-card-title">SPH Simulation — Live</span>
-        </div>
-        <!-- Animated simulation: cycling between two frames to simulate motion -->
-        <div class="sph-anim-wrap">
-          <video class="sph-video" autoplay loop muted playsinline preload="auto">
-            <source src="sph_simulation.mp4" type="video/mp4">
-          </video>
-          <div class="sph-scan-line"></div>
-        </div>
-        <div class="sph-caption">3D DEM terrain · Particle runout · Multi-source convergence</div>
-      </div>
-    </div>
     <div class="edu-cards">
       <div class="section-header">
         <div class="section-eyebrow">Education</div>
